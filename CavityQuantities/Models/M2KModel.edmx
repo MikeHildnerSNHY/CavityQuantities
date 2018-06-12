@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="M2K_DATA_WHSEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IM_IM">
+          <Key>
+            <PropertyRef Name="Part_Number" />
+          </Key>
+          <Property Name="Part_Number" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="25" />
+          <Property Name="Um" Type="varchar" MaxLength="2" />
+          <Property Name="Gl_Account" Type="varchar" MaxLength="25" />
+          <Property Name="Date_Added" Type="smalldatetime" />
+          <Property Name="Cto_Gen_Part" Type="varchar" MaxLength="3" />
+          <Property Name="Cto_Model" Type="varchar" MaxLength="19" />
+          <Property Name="Sales_Um" Type="varchar" MaxLength="5" />
+          <Property Name="Setup_Cost_Category" Type="varchar" MaxLength="10" />
+          <Property Name="Carry_Rate_Category" Type="varchar" MaxLength="10" />
+          <Property Name="Accounting_Status" Type="varchar" MaxLength="1" />
+          <Property Name="Buyer_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Abc_Cd" Type="varchar" MaxLength="3" />
+          <Property Name="Component_SA_Data" Type="varchar" MaxLength="1" />
+          <Property Name="Sales_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Last_Std_Cost_Date" Type="smalldatetime" />
+          <Property Name="Long_Item_Nbr" Type="varchar" MaxLength="45" />
+          <Property Name="Class_Data" Type="varchar" MaxLength="8" />
+          <Property Name="Month_End_Qty" Type="int" />
+          <Property Name="Sub_Nbr" Type="varchar" MaxLength="15" />
+          <Property Name="Division_Code" Type="varchar" MaxLength="2" />
+          <Property Name="Cr_Code" Type="varchar" MaxLength="2" />
+          <Property Name="Incr_Setup_Cost" Type="numeric" Precision="10" Scale="4" />
+          <Property Name="Roll_Setup_Cost" Type="numeric" Precision="10" Scale="4" />
+          <Property Name="Frght_Cost_Code" Type="varchar" MaxLength="3" />
+          <Property Name="Update_Part_Wt" Type="varchar" MaxLength="20" />
+          <Property Name="Assy_Wc" Type="varchar" MaxLength="8" />
+          <Property Name="User_Def_6" Type="varchar" MaxLength="20" />
+          <Property Name="User_Def_8" Type="varchar" MaxLength="3" />
+          <Property Name="Family" Type="varchar" MaxLength="7" />
+          <Property Name="Kbf" Type="varchar" MaxLength="1" />
+          <Property Name="Purch_Um" Type="varchar" MaxLength="2" />
+          <Property Name="Price_Grp_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Sales_Qty_Grp_Mult" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="Qty_Per_Package" Type="int" />
+          <Property Name="Broken_Pack_Ec" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="Supersede_Pn" Type="varchar" MaxLength="19" />
+          <Property Name="Supersede_Ctl" Type="varchar" MaxLength="3" />
+          <Property Name="Catalog_Price_Chg_Dt" Type="smalldatetime" />
+          <Property Name="Model_Code" Type="varchar" MaxLength="10" />
+          <Property Name="Ex_Tax_Code" Type="varchar" MaxLength="3" />
+          <Property Name="Cto_Prompt" Type="varchar" MaxLength="45" />
+          <Property Name="Cto_Opt_Select_Mode" Type="varchar" MaxLength="2" />
+          <Property Name="Next_Count_Date" Type="smalldatetime" />
+          <Property Name="Base_Unit_Price" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Rec_Insp_Req" Type="varchar" MaxLength="1" />
+          <Property Name="Cc_Code" Type="varchar" MaxLength="1" />
+          <Property Name="Cc_Priority" Type="varchar" MaxLength="10" />
+          <Property Name="Date_Avg_Cst_Updte" Type="smalldatetime" />
+          <Property Name="Cto_Option_Desc" Type="varchar" MaxLength="45" />
+          <Property Name="Def_Selling_Um" Type="varchar" MaxLength="3" />
+          <Property Name="Prompt_Sell_Um" Type="varchar" MaxLength="1" />
+          <Property Name="Acct_Rollup" Type="smalldatetime" />
+          <Property Name="Rout_Excl_Flg" Type="varchar" MaxLength="1" />
+          <Property Name="Prompt_Price_Um" Type="varchar" MaxLength="2" />
+          <Property Name="Nbr_Of_Comp" Type="varchar" MaxLength="4" />
+          <Property Name="Dflt_Ship_To_Code" Type="varchar" MaxLength="7" />
+          <Property Name="Cto_Opt_Minimum" Type="int" />
+          <Property Name="Index_Calc_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Base_Year_Cost" Type="numeric" Precision="12" Scale="4" />
+          <Property Name="Lifo_Pool_Override" Type="varchar" MaxLength="3" />
+          <Property Name="Cto_Opt_Maximum" Type="int" />
+          <Property Name="Gl_Sales_Cogs_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Cc_Process" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Gen_Desc_Source" Type="varchar" MaxLength="18" />
+          <Property Name="Cto_Opt_Result_Ccv" Type="varchar" MaxLength="18" />
+          <Property Name="Cto_Desc_Gen_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Display_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Item_Nbr_Gen_Flg" Type="varchar" MaxLength="3" />
+          <Property Name="Matl_Cert_Reqd" Type="varchar" MaxLength="1" />
+          <Property Name="Inventory_Type" Type="varchar" MaxLength="2" />
+          <Property Name="Planner_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Engr_Resp" Type="varchar" MaxLength="5" />
+          <Property Name="Sn_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Prod_Code" Type="varchar" MaxLength="1" />
+          <Property Name="Wog_Req" Type="varchar" MaxLength="1" />
+          <Property Name="Fcst_Item" Type="varchar" MaxLength="1" />
+          <Property Name="Apply_Fcst" Type="varchar" MaxLength="1" />
+          <Property Name="Lot_Trace" Type="varchar" MaxLength="1" />
+          <Property Name="User_Maint_Shrink" Type="varchar" MaxLength="1" />
+          <Property Name="Usage_Detail_Req" Type="varchar" MaxLength="1" />
+          <Property Name="Comp_Iss_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Var_Fwd_Flg" Type="varchar" MaxLength="1" />
+          <Property Name="Drawing_Nbrs" Type="varchar" MaxLength="10" />
+          <Property Name="Drawing_Sizes" Type="varchar" MaxLength="10" />
+          <Property Name="Drawing_Sheets" Type="varchar" MaxLength="7" />
+          <Property Name="Drawing_Types" Type="varchar" MaxLength="7" />
+          <Property Name="Drawing_Revisions" Type="varchar" MaxLength="9" />
+          <Property Name="Draw_Rev_Date" Type="smalldatetime" />
+          <Property Name="Bom_Rev_Level" Type="varchar" MaxLength="2" />
+          <Property Name="Bom_Rev_Date" Type="smalldatetime" />
+          <Property Name="Ie_Rev_Level" Type="varchar" MaxLength="2" />
+          <Property Name="Ie_Rev_Date" Type="smalldatetime" />
+          <Property Name="Cto_Item_Nbr_Suffix" Type="varchar" MaxLength="6" />
+          <Property Name="Supply_Item_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Ucc_Prod_ID" Type="int" />
+          <Property Name="Std_Stock_Label" Type="varchar" MaxLength="8" />
+          <Property Name="Minimum_Order_Qty" Type="int" />
+          <Property Name="Def_Pricing_Um" Type="varchar" MaxLength="3" />
+          <Property Name="Taxable" Type="varchar" MaxLength="1" />
+          <Property Name="Commissionable" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Price_Roll_Opt" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Fd_Auto_Create" Type="varchar" MaxLength="1" />
+          <Property Name="Plpo_Rqn_Flg" Type="varchar" MaxLength="1" />
+          <Property Name="IM_Ven_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Freight_Class" Type="varchar" MaxLength="7" />
+          <Property Name="Checkpoints_Used" Type="varchar" MaxLength="1" />
+          <Property Name="Commodity_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Vat_Tax_Code" Type="varchar" MaxLength="10" />
+          <Property Name="Sn_Hist_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Default_Price_Period" Type="varchar" MaxLength="1" />
+          <Property Name="Default_Fix_Var" Type="varchar" MaxLength="2" />
+          <Property Name="Def_Allowance_Qty" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="Cto_Date_Changed" Type="smalldatetime" />
+          <Property Name="Cto_Time_Changed" Type="varchar" MaxLength="5" />
+          <Property Name="Min_Bom_Rev_Level" Type="varchar" MaxLength="2" />
+          <Property Name="Dist_Active" Type="varchar" MaxLength="1" />
+          <Property Name="Country_Of_Origin" Type="varchar" MaxLength="7" />
+          <Property Name="Primary_Component" Type="varchar" MaxLength="45" />
+          <Property Name="New_Warr_Type" Type="varchar" MaxLength="4" />
+          <Property Name="Repr_Warr_Type" Type="varchar" MaxLength="4" />
+          <Property Name="Repl_Warr_Type" Type="varchar" MaxLength="4" />
+          <Property Name="Std_Rt_Nbr" Type="varchar" MaxLength="15" />
+          <Property Name="Cto_Price_Code" Type="varchar" MaxLength="3" />
+          <Property Name="Wo_Archive_Kept" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_Next_Nbrs_Path" Type="varchar" MaxLength="10" />
+          <Property Name="Use_Expire_Days" Type="int" />
+          <Property Name="Sale_Expire_Days" Type="int" />
+          <Property Name="FIFO_Alloc" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_User_Ccv" Type="varchar" MaxLength="15" />
+          <Property Name="Ccv_Field_Option" Type="varchar" MaxLength="10" />
+          <Property Name="Freight_Uom" Type="varchar" MaxLength="3" />
+          <Property Name="Freight_Rate" Type="numeric" Precision="14" Scale="4" />
+          <Property Name="Dup_Check_Method" Type="varchar" MaxLength="6" />
+          <Property Name="Dup_Config_Limit" Type="varchar" MaxLength="6" />
+          <Property Name="Dup_Config_Rule" Type="varchar" MaxLength="6" />
+          <Property Name="Create_SA_Data" Type="varchar" MaxLength="6" />
+          <Property Name="Default_Ship_Db" Type="varchar" MaxLength="10" />
+          <Property Name="Cto_Type" Type="varchar" MaxLength="3" />
+          <Property Name="Negate_Cto_Price" Type="varchar" MaxLength="6" />
+          <Property Name="Cto_Bal_Nbr" Type="varchar" MaxLength="3" />
+          <Property Name="Cto_Prt_Flag" Type="varchar" MaxLength="4" />
+          <Property Name="Date_Changed" Type="smalldatetime" />
+          <Property Name="Alt_Burden_Pct" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="Pur_Taxable" Type="varchar" MaxLength="7" />
+          <Property Name="Drop_Ship_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Cto_As_Reqd_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Use_Up_Start_Date" Type="smalldatetime" />
+          <Property Name="New_Part_To_Use" Type="varchar" MaxLength="25" />
+          <Property Name="Part_To_Use_Up" Type="varchar" MaxLength="25" />
+          <Property Name="Use_Up_End_Dte" Type="smalldatetime" />
+          <Property Name="Cto_Eto_Flag" Type="varchar" MaxLength="4" />
+          <Property Name="Gauge_Var_Flag" Type="varchar" MaxLength="1" />
+          <Property Name="Book_To_Plan_Bill" Type="varchar" MaxLength="19" />
+          <Property Name="Reserved_285" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_287" Type="varchar" MaxLength="4" />
+          <Property Name="Min_Gm_Pct" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="Max_Gm_Pct" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="Gm_Msg_User" Type="varchar" MaxLength="8" />
+          <Property Name="Reserved_291" Type="varchar" MaxLength="4" />
+          <Property Name="Receipts_At_Shipment" Type="varchar" MaxLength="1" />
+          <Property Name="Reserved_294" Type="varchar" MaxLength="4" />
+          <Property Name="So_Order_Split" Type="varchar" MaxLength="1" />
+          <Property Name="Min_Stock_Level" Type="int" />
+          <Property Name="Max_Stock_Level" Type="int" />
+          <Property Name="Roll_Cto_Price" Type="varchar" MaxLength="1" />
+          <Property Name="Reserved_299" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_300" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_301" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_302" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_303" Type="varchar" MaxLength="4" />
+          <Property Name="Acctg_Value_Update" Type="varchar" MaxLength="1" />
+          <Property Name="Reserved_315" Type="varchar" MaxLength="4" />
+          <Property Name="Sn_Create_Opt" Type="varchar" MaxLength="1" />
+          <Property Name="User_Sn_Create_Sub" Type="varchar" MaxLength="1" />
+          <Property Name="Ae_Type" Type="varchar" MaxLength="12" />
+          <Property Name="Nmfc_Number" Type="varchar" MaxLength="8" />
+          <Property Name="Hazardous_Material" Type="varchar" MaxLength="1" />
+          <Property Name="Hazardous_Class" Type="varchar" MaxLength="5" />
+          <Property Name="Un_Na_ID_Number" Type="varchar" MaxLength="6" />
+          <Property Name="Hazard_Packing_Group" Type="varchar" MaxLength="3" />
+          <Property Name="Hazard_Exemption_8a" Type="varchar" MaxLength="3" />
+          <Property Name="Hazard_Exemption_8b" Type="varchar" MaxLength="3" />
+          <Property Name="Hazard_Exemption_8c" Type="varchar" MaxLength="3" />
+          <Property Name="Hazard_Emergency_Pn" Type="varchar" MaxLength="16" />
+          <Property Name="Reserved_341" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_342" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_343" Type="varchar" MaxLength="4" />
+          <Property Name="Reserved_344" Type="varchar" MaxLength="4" />
+          <Property Name="Wo_Lot_Opt" Type="varchar" MaxLength="1" />
+          <Property Name="Single_Lot_Control" Type="varchar" MaxLength="1" />
+          <Property Name="Primary_Rt" Type="varchar" MaxLength="25" />
+          <Property Name="Primary_Rt_Date" Type="smalldatetime" />
+          <Property Name="Bpr_Horizon_Days" Type="int" />
+          <Property Name="Bpr_Exclusion_Code" Type="varchar" MaxLength="1" />
+          <Property Name="User_Def_11" Type="varchar" MaxLength="20" />
+          <Property Name="User_Def_12" Type="varchar" MaxLength="20" />
+          <Property Name="User_Def_13" Type="varchar" MaxLength="20" />
+          <Property Name="User_Def_14" Type="varchar" MaxLength="20" />
+          <Property Name="User_Def_15" Type="varchar" MaxLength="20" />
+          <Property Name="Lead_Time_Code" Type="varchar" MaxLength="2" />
+          <Property Name="Sp_Desc" Type="varchar" MaxLength="35" />
+          <Property Name="Fac_Code" Type="varchar" MaxLength="4" />
+          <Property Name="Permanent_Loc" Type="varchar" MaxLength="8" />
+          <Property Name="Engineering_Status" Type="varchar" MaxLength="1" />
+          <Property Name="Ship_Divn_Fac" Type="nvarchar" MaxLength="4" />
+          <Property Name="Cavity" Type="varchar" MaxLength="20" />
+          <Property Name="Order_Policy_Code" Type="varchar" MaxLength="6" />
+          <Property Name="Material_Desc" Type="varchar" MaxLength="15" />
+          <Property Name="Weight" Type="numeric" Precision="10" Scale="4" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'M2K_DATA_WHSE.dbo.vSA_Sales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vSA_Sales">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="Record_Type" Type="char" MaxLength="2" />
+          <Property Name="Inv_So_Date" Type="smalldatetime" />
+          <Property Name="Cust_Nbr" Type="char" MaxLength="6" />
+          <Property Name="Part_Nbr" Type="char" MaxLength="25" />
+          <Property Name="Long_Part_Nbr" Type="varchar" MaxLength="45" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Ext_List_Price" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="Part_Discount" Type="numeric" Precision="16" Scale="2" />
+          <Property Name="Sales" Type="numeric" Precision="16" Scale="2" />
+          <Property Name="Cost" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="Gross_Margin_Dollars" Type="numeric" Precision="19" Scale="2" />
+          <Property Name="Quote" Type="char" MaxLength="8" />
+          <Property Name="SONbr" Type="varchar" MaxLength="6" />
+          <Property Name="SOLine" Type="varchar" MaxLength="4" />
+          <Property Name="Del_Nbr" Type="varchar" MaxLength="3" />
+          <Property Name="Inv_So_Nbr" Type="varchar" MaxLength="10" />
+          <Property Name="Inv_Line_Nbr" Type="varchar" MaxLength="4" />
+          <Property Name="Ship_To_Addr_Code" Type="varchar" MaxLength="10" />
+          <Property Name="Customer_Req_Date" Type="smalldatetime" />
+          <Property Name="Invoice_Type" Type="varchar" MaxLength="2" />
+          <Property Name="Inventory_Type" Type="varchar" MaxLength="2" />
+          <Property Name="Sales_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Price_Grp_Code" Type="varchar" MaxLength="5" />
+          <Property Name="Division_Code" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityContainer Name="M2K_DATA_WHSEModelStoreContainer">
+          <EntitySet Name="IM_IM" EntityType="Self.IM_IM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vSA_Sales" EntityType="Self.vSA_Sales" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vSA_Sales].[RecordID] AS [RecordID], 
+    [vSA_Sales].[Record_Type] AS [Record_Type], 
+    [vSA_Sales].[Inv_So_Date] AS [Inv_So_Date], 
+    [vSA_Sales].[Cust_Nbr] AS [Cust_Nbr], 
+    [vSA_Sales].[Part_Nbr] AS [Part_Nbr], 
+    [vSA_Sales].[Long_Part_Nbr] AS [Long_Part_Nbr], 
+    [vSA_Sales].[Quantity] AS [Quantity], 
+    [vSA_Sales].[Ext_List_Price] AS [Ext_List_Price], 
+    [vSA_Sales].[Part_Discount] AS [Part_Discount], 
+    [vSA_Sales].[Sales] AS [Sales], 
+    [vSA_Sales].[Cost] AS [Cost], 
+    [vSA_Sales].[Gross_Margin_Dollars] AS [Gross_Margin_Dollars], 
+    [vSA_Sales].[Quote] AS [Quote], 
+    [vSA_Sales].[SONbr] AS [SONbr], 
+    [vSA_Sales].[SOLine] AS [SOLine], 
+    [vSA_Sales].[Del_Nbr] AS [Del_Nbr], 
+    [vSA_Sales].[Inv_So_Nbr] AS [Inv_So_Nbr], 
+    [vSA_Sales].[Inv_Line_Nbr] AS [Inv_Line_Nbr], 
+    [vSA_Sales].[Ship_To_Addr_Code] AS [Ship_To_Addr_Code], 
+    [vSA_Sales].[Customer_Req_Date] AS [Customer_Req_Date], 
+    [vSA_Sales].[Invoice_Type] AS [Invoice_Type], 
+    [vSA_Sales].[Inventory_Type] AS [Inventory_Type], 
+    [vSA_Sales].[Sales_Code] AS [Sales_Code], 
+    [vSA_Sales].[Price_Grp_Code] AS [Price_Grp_Code], 
+    [vSA_Sales].[Division_Code] AS [Division_Code]
+    FROM [dbo].[vSA_Sales] AS [vSA_Sales]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="M2K_DATA_WHSEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IM_IM">
+          <Key>
+            <PropertyRef Name="Part_Number" />
+          </Key>
+          <Property Name="Part_Number" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Um" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Gl_Account" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Added" Type="DateTime" Precision="0" />
+          <Property Name="Cto_Gen_Part" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Model" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="Sales_Um" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Setup_Cost_Category" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Carry_Rate_Category" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Accounting_Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Buyer_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Abc_Cd" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Component_SA_Data" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Sales_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Std_Cost_Date" Type="DateTime" Precision="0" />
+          <Property Name="Long_Item_Nbr" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Class_Data" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Month_End_Qty" Type="Int32" />
+          <Property Name="Sub_Nbr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Division_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Cr_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Incr_Setup_Cost" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Roll_Setup_Cost" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Frght_Cost_Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Update_Part_Wt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Assy_Wc" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_6" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_8" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Family" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Kbf" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Purch_Um" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Price_Grp_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Sales_Qty_Grp_Mult" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="Qty_Per_Package" Type="Int32" />
+          <Property Name="Broken_Pack_Ec" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="Supersede_Pn" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="Supersede_Ctl" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Catalog_Price_Chg_Dt" Type="DateTime" Precision="0" />
+          <Property Name="Model_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Ex_Tax_Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Prompt" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Opt_Select_Mode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Next_Count_Date" Type="DateTime" Precision="0" />
+          <Property Name="Base_Unit_Price" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Rec_Insp_Req" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cc_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cc_Priority" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Avg_Cst_Updte" Type="DateTime" Precision="0" />
+          <Property Name="Cto_Option_Desc" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Def_Selling_Um" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Prompt_Sell_Um" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Acct_Rollup" Type="DateTime" Precision="0" />
+          <Property Name="Rout_Excl_Flg" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Prompt_Price_Um" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Nbr_Of_Comp" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Dflt_Ship_To_Code" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Opt_Minimum" Type="Int32" />
+          <Property Name="Index_Calc_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Base_Year_Cost" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="Lifo_Pool_Override" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Opt_Maximum" Type="Int32" />
+          <Property Name="Gl_Sales_Cogs_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Cc_Process" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Gen_Desc_Source" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Opt_Result_Ccv" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Desc_Gen_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Display_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Item_Nbr_Gen_Flg" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Matl_Cert_Reqd" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Inventory_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Planner_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Engr_Resp" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Sn_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Prod_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Wog_Req" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Fcst_Item" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Apply_Fcst" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Lot_Trace" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="User_Maint_Shrink" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Usage_Detail_Req" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Comp_Iss_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Var_Fwd_Flg" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_Nbrs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_Sizes" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_Sheets" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_Types" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Drawing_Revisions" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Draw_Rev_Date" Type="DateTime" Precision="0" />
+          <Property Name="Bom_Rev_Level" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Bom_Rev_Date" Type="DateTime" Precision="0" />
+          <Property Name="Ie_Rev_Level" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Ie_Rev_Date" Type="DateTime" Precision="0" />
+          <Property Name="Cto_Item_Nbr_Suffix" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Supply_Item_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Ucc_Prod_ID" Type="Int32" />
+          <Property Name="Std_Stock_Label" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Minimum_Order_Qty" Type="Int32" />
+          <Property Name="Def_Pricing_Um" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Taxable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Commissionable" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Price_Roll_Opt" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Fd_Auto_Create" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Plpo_Rqn_Flg" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="IM_Ven_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Freight_Class" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Checkpoints_Used" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Commodity_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Vat_Tax_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Sn_Hist_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Default_Price_Period" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Default_Fix_Var" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Def_Allowance_Qty" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="Cto_Date_Changed" Type="DateTime" Precision="0" />
+          <Property Name="Cto_Time_Changed" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Min_Bom_Rev_Level" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Dist_Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Country_Of_Origin" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Primary_Component" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="New_Warr_Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Repr_Warr_Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Repl_Warr_Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Std_Rt_Nbr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Price_Code" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Wo_Archive_Kept" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Next_Nbrs_Path" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Use_Expire_Days" Type="Int32" />
+          <Property Name="Sale_Expire_Days" Type="Int32" />
+          <Property Name="FIFO_Alloc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_User_Ccv" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Ccv_Field_Option" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Freight_Uom" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Freight_Rate" Type="Decimal" Precision="14" Scale="4" />
+          <Property Name="Dup_Check_Method" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Dup_Config_Limit" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Dup_Config_Rule" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Create_SA_Data" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Default_Ship_Db" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Type" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Negate_Cto_Price" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Bal_Nbr" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_Prt_Flag" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Changed" Type="DateTime" Precision="0" />
+          <Property Name="Alt_Burden_Pct" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Pur_Taxable" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Drop_Ship_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Cto_As_Reqd_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Use_Up_Start_Date" Type="DateTime" Precision="0" />
+          <Property Name="New_Part_To_Use" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Part_To_Use_Up" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Use_Up_End_Dte" Type="DateTime" Precision="0" />
+          <Property Name="Cto_Eto_Flag" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Gauge_Var_Flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Book_To_Plan_Bill" Type="String" MaxLength="19" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_285" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_287" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Min_Gm_Pct" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Max_Gm_Pct" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Gm_Msg_User" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_291" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Receipts_At_Shipment" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_294" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="So_Order_Split" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Min_Stock_Level" Type="Int32" />
+          <Property Name="Max_Stock_Level" Type="Int32" />
+          <Property Name="Roll_Cto_Price" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_299" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_300" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_301" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_302" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_303" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Acctg_Value_Update" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_315" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Sn_Create_Opt" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="User_Sn_Create_Sub" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Ae_Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Nmfc_Number" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Hazardous_Material" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Hazardous_Class" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Un_Na_ID_Number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Packing_Group" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Exemption_8a" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Exemption_8b" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Exemption_8c" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Hazard_Emergency_Pn" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_341" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_342" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_343" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Reserved_344" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Wo_Lot_Opt" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Single_Lot_Control" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Primary_Rt" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Primary_Rt_Date" Type="DateTime" Precision="0" />
+          <Property Name="Bpr_Horizon_Days" Type="Int32" />
+          <Property Name="Bpr_Exclusion_Code" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_11" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_12" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_13" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_14" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="User_Def_15" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Lead_Time_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Sp_Desc" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="Fac_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Permanent_Loc" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Engineering_Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Ship_Divn_Fac" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Cavity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Order_Policy_Code" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Material_Desc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Weight" Type="Decimal" Precision="10" Scale="4" />
+        </EntityType>
+        <EntityType Name="vSA_Sales">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="RecordID" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Record_Type" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Inv_So_Date" Type="DateTime" Precision="0" />
+          <Property Name="Cust_Nbr" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="Part_Nbr" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+          <Property Name="Long_Part_Nbr" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Ext_List_Price" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="Part_Discount" Type="Decimal" Precision="16" Scale="2" />
+          <Property Name="Sales" Type="Decimal" Precision="16" Scale="2" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Gross_Margin_Dollars" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="Quote" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="SONbr" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SOLine" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Del_Nbr" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Inv_So_Nbr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Inv_Line_Nbr" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Ship_To_Addr_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Req_Date" Type="DateTime" Precision="0" />
+          <Property Name="Invoice_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Inventory_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Sales_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Price_Grp_Code" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Division_Code" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="M2K_DATA_WHSEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IM_IM" EntityType="Self.IM_IM" />
+          <EntitySet Name="vSA_Sales" EntityType="Self.vSA_Sales" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="M2K_DATA_WHSEModelStoreContainer" CdmEntityContainer="M2K_DATA_WHSEEntities">
+          <EntitySetMapping Name="IM_IM">
+            <EntityTypeMapping TypeName="M2K_DATA_WHSEModel.IM_IM">
+              <MappingFragment StoreEntitySet="IM_IM">
+                <ScalarProperty Name="Part_Number" ColumnName="Part_Number" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Um" ColumnName="Um" />
+                <ScalarProperty Name="Gl_Account" ColumnName="Gl_Account" />
+                <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+                <ScalarProperty Name="Cto_Gen_Part" ColumnName="Cto_Gen_Part" />
+                <ScalarProperty Name="Cto_Model" ColumnName="Cto_Model" />
+                <ScalarProperty Name="Sales_Um" ColumnName="Sales_Um" />
+                <ScalarProperty Name="Setup_Cost_Category" ColumnName="Setup_Cost_Category" />
+                <ScalarProperty Name="Carry_Rate_Category" ColumnName="Carry_Rate_Category" />
+                <ScalarProperty Name="Accounting_Status" ColumnName="Accounting_Status" />
+                <ScalarProperty Name="Buyer_Code" ColumnName="Buyer_Code" />
+                <ScalarProperty Name="Abc_Cd" ColumnName="Abc_Cd" />
+                <ScalarProperty Name="Component_SA_Data" ColumnName="Component_SA_Data" />
+                <ScalarProperty Name="Sales_Code" ColumnName="Sales_Code" />
+                <ScalarProperty Name="Last_Std_Cost_Date" ColumnName="Last_Std_Cost_Date" />
+                <ScalarProperty Name="Long_Item_Nbr" ColumnName="Long_Item_Nbr" />
+                <ScalarProperty Name="Class_Data" ColumnName="Class_Data" />
+                <ScalarProperty Name="Month_End_Qty" ColumnName="Month_End_Qty" />
+                <ScalarProperty Name="Sub_Nbr" ColumnName="Sub_Nbr" />
+                <ScalarProperty Name="Division_Code" ColumnName="Division_Code" />
+                <ScalarProperty Name="Cr_Code" ColumnName="Cr_Code" />
+                <ScalarProperty Name="Incr_Setup_Cost" ColumnName="Incr_Setup_Cost" />
+                <ScalarProperty Name="Roll_Setup_Cost" ColumnName="Roll_Setup_Cost" />
+                <ScalarProperty Name="Frght_Cost_Code" ColumnName="Frght_Cost_Code" />
+                <ScalarProperty Name="Update_Part_Wt" ColumnName="Update_Part_Wt" />
+                <ScalarProperty Name="Assy_Wc" ColumnName="Assy_Wc" />
+                <ScalarProperty Name="User_Def_6" ColumnName="User_Def_6" />
+                <ScalarProperty Name="User_Def_8" ColumnName="User_Def_8" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="Kbf" ColumnName="Kbf" />
+                <ScalarProperty Name="Purch_Um" ColumnName="Purch_Um" />
+                <ScalarProperty Name="Price_Grp_Code" ColumnName="Price_Grp_Code" />
+                <ScalarProperty Name="Sales_Qty_Grp_Mult" ColumnName="Sales_Qty_Grp_Mult" />
+                <ScalarProperty Name="Qty_Per_Package" ColumnName="Qty_Per_Package" />
+                <ScalarProperty Name="Broken_Pack_Ec" ColumnName="Broken_Pack_Ec" />
+                <ScalarProperty Name="Supersede_Pn" ColumnName="Supersede_Pn" />
+                <ScalarProperty Name="Supersede_Ctl" ColumnName="Supersede_Ctl" />
+                <ScalarProperty Name="Catalog_Price_Chg_Dt" ColumnName="Catalog_Price_Chg_Dt" />
+                <ScalarProperty Name="Model_Code" ColumnName="Model_Code" />
+                <ScalarProperty Name="Ex_Tax_Code" ColumnName="Ex_Tax_Code" />
+                <ScalarProperty Name="Cto_Prompt" ColumnName="Cto_Prompt" />
+                <ScalarProperty Name="Cto_Opt_Select_Mode" ColumnName="Cto_Opt_Select_Mode" />
+                <ScalarProperty Name="Next_Count_Date" ColumnName="Next_Count_Date" />
+                <ScalarProperty Name="Base_Unit_Price" ColumnName="Base_Unit_Price" />
+                <ScalarProperty Name="Rec_Insp_Req" ColumnName="Rec_Insp_Req" />
+                <ScalarProperty Name="Cc_Code" ColumnName="Cc_Code" />
+                <ScalarProperty Name="Cc_Priority" ColumnName="Cc_Priority" />
+                <ScalarProperty Name="Date_Avg_Cst_Updte" ColumnName="Date_Avg_Cst_Updte" />
+                <ScalarProperty Name="Cto_Option_Desc" ColumnName="Cto_Option_Desc" />
+                <ScalarProperty Name="Def_Selling_Um" ColumnName="Def_Selling_Um" />
+                <ScalarProperty Name="Prompt_Sell_Um" ColumnName="Prompt_Sell_Um" />
+                <ScalarProperty Name="Acct_Rollup" ColumnName="Acct_Rollup" />
+                <ScalarProperty Name="Rout_Excl_Flg" ColumnName="Rout_Excl_Flg" />
+                <ScalarProperty Name="Prompt_Price_Um" ColumnName="Prompt_Price_Um" />
+                <ScalarProperty Name="Nbr_Of_Comp" ColumnName="Nbr_Of_Comp" />
+                <ScalarProperty Name="Dflt_Ship_To_Code" ColumnName="Dflt_Ship_To_Code" />
+                <ScalarProperty Name="Cto_Opt_Minimum" ColumnName="Cto_Opt_Minimum" />
+                <ScalarProperty Name="Index_Calc_Flag" ColumnName="Index_Calc_Flag" />
+                <ScalarProperty Name="Base_Year_Cost" ColumnName="Base_Year_Cost" />
+                <ScalarProperty Name="Lifo_Pool_Override" ColumnName="Lifo_Pool_Override" />
+                <ScalarProperty Name="Cto_Opt_Maximum" ColumnName="Cto_Opt_Maximum" />
+                <ScalarProperty Name="Gl_Sales_Cogs_Code" ColumnName="Gl_Sales_Cogs_Code" />
+                <ScalarProperty Name="Cc_Process" ColumnName="Cc_Process" />
+                <ScalarProperty Name="Cto_Gen_Desc_Source" ColumnName="Cto_Gen_Desc_Source" />
+                <ScalarProperty Name="Cto_Opt_Result_Ccv" ColumnName="Cto_Opt_Result_Ccv" />
+                <ScalarProperty Name="Cto_Desc_Gen_Flag" ColumnName="Cto_Desc_Gen_Flag" />
+                <ScalarProperty Name="Cto_Display_Flag" ColumnName="Cto_Display_Flag" />
+                <ScalarProperty Name="Cto_Item_Nbr_Gen_Flg" ColumnName="Cto_Item_Nbr_Gen_Flg" />
+                <ScalarProperty Name="Matl_Cert_Reqd" ColumnName="Matl_Cert_Reqd" />
+                <ScalarProperty Name="Inventory_Type" ColumnName="Inventory_Type" />
+                <ScalarProperty Name="Planner_Code" ColumnName="Planner_Code" />
+                <ScalarProperty Name="Engr_Resp" ColumnName="Engr_Resp" />
+                <ScalarProperty Name="Sn_Flag" ColumnName="Sn_Flag" />
+                <ScalarProperty Name="Prod_Code" ColumnName="Prod_Code" />
+                <ScalarProperty Name="Wog_Req" ColumnName="Wog_Req" />
+                <ScalarProperty Name="Fcst_Item" ColumnName="Fcst_Item" />
+                <ScalarProperty Name="Apply_Fcst" ColumnName="Apply_Fcst" />
+                <ScalarProperty Name="Lot_Trace" ColumnName="Lot_Trace" />
+                <ScalarProperty Name="User_Maint_Shrink" ColumnName="User_Maint_Shrink" />
+                <ScalarProperty Name="Usage_Detail_Req" ColumnName="Usage_Detail_Req" />
+                <ScalarProperty Name="Comp_Iss_Flag" ColumnName="Comp_Iss_Flag" />
+                <ScalarProperty Name="Var_Fwd_Flg" ColumnName="Var_Fwd_Flg" />
+                <ScalarProperty Name="Drawing_Nbrs" ColumnName="Drawing_Nbrs" />
+                <ScalarProperty Name="Drawing_Sizes" ColumnName="Drawing_Sizes" />
+                <ScalarProperty Name="Drawing_Sheets" ColumnName="Drawing_Sheets" />
+                <ScalarProperty Name="Drawing_Types" ColumnName="Drawing_Types" />
+                <ScalarProperty Name="Drawing_Revisions" ColumnName="Drawing_Revisions" />
+                <ScalarProperty Name="Draw_Rev_Date" ColumnName="Draw_Rev_Date" />
+                <ScalarProperty Name="Bom_Rev_Level" ColumnName="Bom_Rev_Level" />
+                <ScalarProperty Name="Bom_Rev_Date" ColumnName="Bom_Rev_Date" />
+                <ScalarProperty Name="Ie_Rev_Level" ColumnName="Ie_Rev_Level" />
+                <ScalarProperty Name="Ie_Rev_Date" ColumnName="Ie_Rev_Date" />
+                <ScalarProperty Name="Cto_Item_Nbr_Suffix" ColumnName="Cto_Item_Nbr_Suffix" />
+                <ScalarProperty Name="Supply_Item_Code" ColumnName="Supply_Item_Code" />
+                <ScalarProperty Name="Ucc_Prod_ID" ColumnName="Ucc_Prod_ID" />
+                <ScalarProperty Name="Std_Stock_Label" ColumnName="Std_Stock_Label" />
+                <ScalarProperty Name="Minimum_Order_Qty" ColumnName="Minimum_Order_Qty" />
+                <ScalarProperty Name="Def_Pricing_Um" ColumnName="Def_Pricing_Um" />
+                <ScalarProperty Name="Taxable" ColumnName="Taxable" />
+                <ScalarProperty Name="Commissionable" ColumnName="Commissionable" />
+                <ScalarProperty Name="Cto_Price_Roll_Opt" ColumnName="Cto_Price_Roll_Opt" />
+                <ScalarProperty Name="Cto_Fd_Auto_Create" ColumnName="Cto_Fd_Auto_Create" />
+                <ScalarProperty Name="Plpo_Rqn_Flg" ColumnName="Plpo_Rqn_Flg" />
+                <ScalarProperty Name="IM_Ven_Flag" ColumnName="IM_Ven_Flag" />
+                <ScalarProperty Name="Freight_Class" ColumnName="Freight_Class" />
+                <ScalarProperty Name="Checkpoints_Used" ColumnName="Checkpoints_Used" />
+                <ScalarProperty Name="Commodity_Code" ColumnName="Commodity_Code" />
+                <ScalarProperty Name="Vat_Tax_Code" ColumnName="Vat_Tax_Code" />
+                <ScalarProperty Name="Sn_Hist_Flag" ColumnName="Sn_Hist_Flag" />
+                <ScalarProperty Name="Default_Price_Period" ColumnName="Default_Price_Period" />
+                <ScalarProperty Name="Default_Fix_Var" ColumnName="Default_Fix_Var" />
+                <ScalarProperty Name="Def_Allowance_Qty" ColumnName="Def_Allowance_Qty" />
+                <ScalarProperty Name="Cto_Date_Changed" ColumnName="Cto_Date_Changed" />
+                <ScalarProperty Name="Cto_Time_Changed" ColumnName="Cto_Time_Changed" />
+                <ScalarProperty Name="Min_Bom_Rev_Level" ColumnName="Min_Bom_Rev_Level" />
+                <ScalarProperty Name="Dist_Active" ColumnName="Dist_Active" />
+                <ScalarProperty Name="Country_Of_Origin" ColumnName="Country_Of_Origin" />
+                <ScalarProperty Name="Primary_Component" ColumnName="Primary_Component" />
+                <ScalarProperty Name="New_Warr_Type" ColumnName="New_Warr_Type" />
+                <ScalarProperty Name="Repr_Warr_Type" ColumnName="Repr_Warr_Type" />
+                <ScalarProperty Name="Repl_Warr_Type" ColumnName="Repl_Warr_Type" />
+                <ScalarProperty Name="Std_Rt_Nbr" ColumnName="Std_Rt_Nbr" />
+                <ScalarProperty Name="Cto_Price_Code" ColumnName="Cto_Price_Code" />
+                <ScalarProperty Name="Wo_Archive_Kept" ColumnName="Wo_Archive_Kept" />
+                <ScalarProperty Name="Cto_Next_Nbrs_Path" ColumnName="Cto_Next_Nbrs_Path" />
+                <ScalarProperty Name="Use_Expire_Days" ColumnName="Use_Expire_Days" />
+                <ScalarProperty Name="Sale_Expire_Days" ColumnName="Sale_Expire_Days" />
+                <ScalarProperty Name="FIFO_Alloc" ColumnName="FIFO_Alloc" />
+                <ScalarProperty Name="Cto_User_Ccv" ColumnName="Cto_User_Ccv" />
+                <ScalarProperty Name="Ccv_Field_Option" ColumnName="Ccv_Field_Option" />
+                <ScalarProperty Name="Freight_Uom" ColumnName="Freight_Uom" />
+                <ScalarProperty Name="Freight_Rate" ColumnName="Freight_Rate" />
+                <ScalarProperty Name="Dup_Check_Method" ColumnName="Dup_Check_Method" />
+                <ScalarProperty Name="Dup_Config_Limit" ColumnName="Dup_Config_Limit" />
+                <ScalarProperty Name="Dup_Config_Rule" ColumnName="Dup_Config_Rule" />
+                <ScalarProperty Name="Create_SA_Data" ColumnName="Create_SA_Data" />
+                <ScalarProperty Name="Default_Ship_Db" ColumnName="Default_Ship_Db" />
+                <ScalarProperty Name="Cto_Type" ColumnName="Cto_Type" />
+                <ScalarProperty Name="Negate_Cto_Price" ColumnName="Negate_Cto_Price" />
+                <ScalarProperty Name="Cto_Bal_Nbr" ColumnName="Cto_Bal_Nbr" />
+                <ScalarProperty Name="Cto_Prt_Flag" ColumnName="Cto_Prt_Flag" />
+                <ScalarProperty Name="Date_Changed" ColumnName="Date_Changed" />
+                <ScalarProperty Name="Alt_Burden_Pct" ColumnName="Alt_Burden_Pct" />
+                <ScalarProperty Name="Pur_Taxable" ColumnName="Pur_Taxable" />
+                <ScalarProperty Name="Drop_Ship_Flag" ColumnName="Drop_Ship_Flag" />
+                <ScalarProperty Name="Cto_As_Reqd_Flag" ColumnName="Cto_As_Reqd_Flag" />
+                <ScalarProperty Name="Use_Up_Start_Date" ColumnName="Use_Up_Start_Date" />
+                <ScalarProperty Name="New_Part_To_Use" ColumnName="New_Part_To_Use" />
+                <ScalarProperty Name="Part_To_Use_Up" ColumnName="Part_To_Use_Up" />
+                <ScalarProperty Name="Use_Up_End_Dte" ColumnName="Use_Up_End_Dte" />
+                <ScalarProperty Name="Cto_Eto_Flag" ColumnName="Cto_Eto_Flag" />
+                <ScalarProperty Name="Gauge_Var_Flag" ColumnName="Gauge_Var_Flag" />
+                <ScalarProperty Name="Book_To_Plan_Bill" ColumnName="Book_To_Plan_Bill" />
+                <ScalarProperty Name="Reserved_285" ColumnName="Reserved_285" />
+                <ScalarProperty Name="Reserved_287" ColumnName="Reserved_287" />
+                <ScalarProperty Name="Min_Gm_Pct" ColumnName="Min_Gm_Pct" />
+                <ScalarProperty Name="Max_Gm_Pct" ColumnName="Max_Gm_Pct" />
+                <ScalarProperty Name="Gm_Msg_User" ColumnName="Gm_Msg_User" />
+                <ScalarProperty Name="Reserved_291" ColumnName="Reserved_291" />
+                <ScalarProperty Name="Receipts_At_Shipment" ColumnName="Receipts_At_Shipment" />
+                <ScalarProperty Name="Reserved_294" ColumnName="Reserved_294" />
+                <ScalarProperty Name="So_Order_Split" ColumnName="So_Order_Split" />
+                <ScalarProperty Name="Min_Stock_Level" ColumnName="Min_Stock_Level" />
+                <ScalarProperty Name="Max_Stock_Level" ColumnName="Max_Stock_Level" />
+                <ScalarProperty Name="Roll_Cto_Price" ColumnName="Roll_Cto_Price" />
+                <ScalarProperty Name="Reserved_299" ColumnName="Reserved_299" />
+                <ScalarProperty Name="Reserved_300" ColumnName="Reserved_300" />
+                <ScalarProperty Name="Reserved_301" ColumnName="Reserved_301" />
+                <ScalarProperty Name="Reserved_302" ColumnName="Reserved_302" />
+                <ScalarProperty Name="Reserved_303" ColumnName="Reserved_303" />
+                <ScalarProperty Name="Acctg_Value_Update" ColumnName="Acctg_Value_Update" />
+                <ScalarProperty Name="Reserved_315" ColumnName="Reserved_315" />
+                <ScalarProperty Name="Sn_Create_Opt" ColumnName="Sn_Create_Opt" />
+                <ScalarProperty Name="User_Sn_Create_Sub" ColumnName="User_Sn_Create_Sub" />
+                <ScalarProperty Name="Ae_Type" ColumnName="Ae_Type" />
+                <ScalarProperty Name="Nmfc_Number" ColumnName="Nmfc_Number" />
+                <ScalarProperty Name="Hazardous_Material" ColumnName="Hazardous_Material" />
+                <ScalarProperty Name="Hazardous_Class" ColumnName="Hazardous_Class" />
+                <ScalarProperty Name="Un_Na_ID_Number" ColumnName="Un_Na_ID_Number" />
+                <ScalarProperty Name="Hazard_Packing_Group" ColumnName="Hazard_Packing_Group" />
+                <ScalarProperty Name="Hazard_Exemption_8a" ColumnName="Hazard_Exemption_8a" />
+                <ScalarProperty Name="Hazard_Exemption_8b" ColumnName="Hazard_Exemption_8b" />
+                <ScalarProperty Name="Hazard_Exemption_8c" ColumnName="Hazard_Exemption_8c" />
+                <ScalarProperty Name="Hazard_Emergency_Pn" ColumnName="Hazard_Emergency_Pn" />
+                <ScalarProperty Name="Reserved_341" ColumnName="Reserved_341" />
+                <ScalarProperty Name="Reserved_342" ColumnName="Reserved_342" />
+                <ScalarProperty Name="Reserved_343" ColumnName="Reserved_343" />
+                <ScalarProperty Name="Reserved_344" ColumnName="Reserved_344" />
+                <ScalarProperty Name="Wo_Lot_Opt" ColumnName="Wo_Lot_Opt" />
+                <ScalarProperty Name="Single_Lot_Control" ColumnName="Single_Lot_Control" />
+                <ScalarProperty Name="Primary_Rt" ColumnName="Primary_Rt" />
+                <ScalarProperty Name="Primary_Rt_Date" ColumnName="Primary_Rt_Date" />
+                <ScalarProperty Name="Bpr_Horizon_Days" ColumnName="Bpr_Horizon_Days" />
+                <ScalarProperty Name="Bpr_Exclusion_Code" ColumnName="Bpr_Exclusion_Code" />
+                <ScalarProperty Name="User_Def_11" ColumnName="User_Def_11" />
+                <ScalarProperty Name="User_Def_12" ColumnName="User_Def_12" />
+                <ScalarProperty Name="User_Def_13" ColumnName="User_Def_13" />
+                <ScalarProperty Name="User_Def_14" ColumnName="User_Def_14" />
+                <ScalarProperty Name="User_Def_15" ColumnName="User_Def_15" />
+                <ScalarProperty Name="Lead_Time_Code" ColumnName="Lead_Time_Code" />
+                <ScalarProperty Name="Sp_Desc" ColumnName="Sp_Desc" />
+                <ScalarProperty Name="Fac_Code" ColumnName="Fac_Code" />
+                <ScalarProperty Name="Permanent_Loc" ColumnName="Permanent_Loc" />
+                <ScalarProperty Name="Engineering_Status" ColumnName="Engineering_Status" />
+                <ScalarProperty Name="Ship_Divn_Fac" ColumnName="Ship_Divn_Fac" />
+                <ScalarProperty Name="Cavity" ColumnName="Cavity" />
+                <ScalarProperty Name="Order_Policy_Code" ColumnName="Order_Policy_Code" />
+                <ScalarProperty Name="Material_Desc" ColumnName="Material_Desc" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vSA_Sales">
+            <EntityTypeMapping TypeName="M2K_DATA_WHSEModel.vSA_Sales">
+              <MappingFragment StoreEntitySet="vSA_Sales">
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Record_Type" ColumnName="Record_Type" />
+                <ScalarProperty Name="Inv_So_Date" ColumnName="Inv_So_Date" />
+                <ScalarProperty Name="Cust_Nbr" ColumnName="Cust_Nbr" />
+                <ScalarProperty Name="Part_Nbr" ColumnName="Part_Nbr" />
+                <ScalarProperty Name="Long_Part_Nbr" ColumnName="Long_Part_Nbr" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Ext_List_Price" ColumnName="Ext_List_Price" />
+                <ScalarProperty Name="Part_Discount" ColumnName="Part_Discount" />
+                <ScalarProperty Name="Sales" ColumnName="Sales" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Gross_Margin_Dollars" ColumnName="Gross_Margin_Dollars" />
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
+                <ScalarProperty Name="SONbr" ColumnName="SONbr" />
+                <ScalarProperty Name="SOLine" ColumnName="SOLine" />
+                <ScalarProperty Name="Del_Nbr" ColumnName="Del_Nbr" />
+                <ScalarProperty Name="Inv_So_Nbr" ColumnName="Inv_So_Nbr" />
+                <ScalarProperty Name="Inv_Line_Nbr" ColumnName="Inv_Line_Nbr" />
+                <ScalarProperty Name="Ship_To_Addr_Code" ColumnName="Ship_To_Addr_Code" />
+                <ScalarProperty Name="Customer_Req_Date" ColumnName="Customer_Req_Date" />
+                <ScalarProperty Name="Invoice_Type" ColumnName="Invoice_Type" />
+                <ScalarProperty Name="Inventory_Type" ColumnName="Inventory_Type" />
+                <ScalarProperty Name="Sales_Code" ColumnName="Sales_Code" />
+                <ScalarProperty Name="Price_Grp_Code" ColumnName="Price_Grp_Code" />
+                <ScalarProperty Name="Division_Code" ColumnName="Division_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
